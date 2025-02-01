@@ -325,12 +325,12 @@
         </div>
     </section>
 
-    <section id="order" class="order-form">
+    <section id="myform" class="order-form">
         <div class="container">
             <div class="form-container">
                 <h2>¡Ordene Ahora!</h2>
                 <p>Envío gratuito a todo México - Entrega en 3 días</p>
-                <form action="thankyou.html" method="POST">
+                <form id="order" action="#" method="POST">
                     <input type="text" class="name" name="name" maxlength="30" placeholder="Ingresa tu nombre" required value="">
                     <input type="tel" class="name" name="phone" id="phoneNumber" placeholder="Ingresa tu número de teléfono" required value="">
                     
@@ -451,5 +451,11 @@
             <p>4. Los resultados pueden variar según el individuo.</p>
         </div>
     </div>
+    <script>
+        document.getElementById('myform').addEventListener('submit', function(event) {
+            event.preventDefault(); // отменяем отправку формы
+            window.location.href = 'thankyou.html'; // перенаправляем на страницу thankyou.html
+        });
+        </script>
 </body>
 </html>
